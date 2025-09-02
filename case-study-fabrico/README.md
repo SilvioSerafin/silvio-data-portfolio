@@ -18,6 +18,8 @@ It demonstrates how data analysis can transform production visibility, cost cont
 - [company_production_tracker.pdf](company_production_tracker.pdf)
 - [dashboard_stakeholder.pbix](dashboard_stakeholder.pbix)
 - [Production Tracker Dashboard](productiontracker_fabrico_ss.png)
+
+  
 Each folder contains:
 - `.pbix` file (Power BI Desktop)  
 - `.pdf` export  
