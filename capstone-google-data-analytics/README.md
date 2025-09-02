@@ -1,6 +1,6 @@
 # Google Data Analytics Capstone – Cyclistic Case Study
 
-This is the final case study project from the Google Data Analytics Certificate, completed in July 2025.
+This is the final case study project from the Google Data Analytics Certificate
 
 ## 🔍 Project Summary
 
