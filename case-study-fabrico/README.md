@@ -1,7 +1,7 @@
 # FabriCo Solutions — Data-Driven Process Improvement
 
-**Role:** Fabricator | Aspiring Data Analyst  
-**Tools:** Power BI, SQL, Excel  
+**Role:** Fabricator | Aspiring Business Analyst  
+**Tools:** Power BI, Excel  
 
 This is my flagship case study based on my workplace experience.  
 It demonstrates how data analysis can transform production visibility, cost control, and workflow efficiency.
