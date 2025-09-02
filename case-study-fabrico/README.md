@@ -21,8 +21,8 @@ It demonstrates how data analysis can transform production visibility, cost cont
 
   
 Each folder contains:
-- `.pbix` file (Power BI Desktop)  
 - `.pdf` export  
+- `.pbix` file (Power BI Desktop)  
 - Screenshots  
 
 ---
