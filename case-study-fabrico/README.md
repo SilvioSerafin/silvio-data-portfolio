@@ -9,8 +9,8 @@ It demonstrates how data analysis can transform production visibility, cost cont
 ---
 
 ## 📄 Case Study Document
-- `FabriCo_Case_Study.pdf` (full write-up)
-- `FabriCo_Case_Study.docx`
+- [Case Study Report](Business_report_v1.pdf) (full write-up)
+
 
 ---
 
@@ -18,7 +18,7 @@ It demonstrates how data analysis can transform production visibility, cost cont
 - [Company_production_tracker.pdf](company_production_tracker.pdf)
 - [Dashboard_stakeholder.pbix](dashboard_stakeholder.pbix)
 - [Production Tracker Dashboard](productiontracker_fabrico_ss.png)
-- [Business_Report](case-study-fabrico/Business_report_v1.pdf)
+
   
 Each folder contains:
 - `.pdf` export  
