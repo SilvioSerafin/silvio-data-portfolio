@@ -11,6 +11,12 @@ It demonstrates how data analysis can transform production visibility, cost cont
 ## 📄 Case Study Document
 - [Business Report](Business_report_v1.pdf) (full write-up)
 
+---
+
+### 🚀 Highlights  
+- Business Report showing how workflow tracking & data strategy can unlock **£90k+/year** in value  
+- Interactive Power BI dashboards (production tracker, stakeholder view)   
+- Workflow diagrams mapping current vs future state
 
 ---
 
@@ -27,6 +33,13 @@ Each folder contains:
 
 ---
 
+## 🛠 Skills Demonstrated  
+- **Data Analysis:** Excel, DAX  
+- **Data Visualization:** Power BI dashboards, automated reporting  
+- **Business Analysis:** Workflow mapping, cost tracking, bottleneck analysis  
+- **Professional Reporting:** Case study, strategic insights, compliance research
+
+---
 ## 🗂️ Process Diagrams
 Located in `/diagrams` (workflow, fluxogram, bottlenecks).
 
