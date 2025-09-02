@@ -18,8 +18,7 @@ It demonstrates how data analysis can transform production visibility, cost cont
 - [Company_production_tracker.pdf](company_production_tracker.pdf)
 - [Dashboard_stakeholder.pbix](dashboard_stakeholder.pbix)
 - [Production Tracker Dashboard](productiontracker_fabrico_ss.png)
-- [case-study-fabrico/Business_report_v1.pdf](case-study-fabrico/Business_report_v1.pdf)
-
+- [Business_Report](case-study-fabrico/Business_report_v1.pdf)
   
 Each folder contains:
 - `.pdf` export  
