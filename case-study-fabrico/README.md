@@ -8,6 +8,14 @@ It demonstrates how data analysis can transform production visibility, cost cont
 
 ---
 
+## 🛠 Skills Demonstrated  
+- **Data Analysis:** Excel, DAX  
+- **Data Visualization:** Power BI dashboards, automated reporting  
+- **Business Analysis:** Workflow mapping, cost tracking, bottleneck analysis  
+- **Professional Reporting:** Case study, strategic insights, compliance research
+
+---
+
 ## 📄 Case Study Document
 - [Business Report](Business_report_v1.pdf) (full write-up)
 
@@ -33,17 +41,11 @@ Each folder contains:
 
 ---
 
-## 🛠 Skills Demonstrated  
-- **Data Analysis:** Excel, DAX  
-- **Data Visualization:** Power BI dashboards, automated reporting  
-- **Business Analysis:** Workflow mapping, cost tracking, bottleneck analysis  
-- **Professional Reporting:** Case study, strategic insights, compliance research
-
----
 ## 🗂️ Process Diagrams
-#Current vs Future State
+Current vs Future State
 -[Current vs Future Diagram](current_vs_future_diagram_v5.drawio.png) 
-#Workflow Diagram
+
+Workflow Diagram
 -[Workflow Diagram](worflow_diagram_v6.drawio.png)
 
 ---
