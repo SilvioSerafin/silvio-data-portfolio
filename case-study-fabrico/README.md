@@ -41,7 +41,7 @@ Each folder contains:
 
 ---
 ## 🗂️ Process Diagrams
-Located in `/diagrams` (workflow, fluxogram, bottlenecks).
+Located in `/diagrams` (workflow, fluxogram, bottlenecks, current vs future state).
 
 ---
 
