@@ -50,7 +50,7 @@ Workflow Diagram
 -[Workflow Diagram](worflow_diagram_v6.drawio.png)
 
 Kanban Replenishment
--[
+-[Kanban Replenishment](kanban_replenishment_flow_v2.drawio.png)
 
 ---
 
