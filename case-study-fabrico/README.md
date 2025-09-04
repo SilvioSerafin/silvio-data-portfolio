@@ -29,19 +29,12 @@ It demonstrates how data analysis can transform production visibility, cost cont
 ---
 
 ## 📊 Dashboards
-- [Company_production_tracker.pdf](company_production_tracker.pdf)
-- [Dashboard_stakeholder.pbix](dashboard_stakeholder.pbix)
-- [Production Tracker Dashboard](productiontracker_fabrico_ss.png)
+- [View Dashboard (PDF)](Company_production_tracker.pdf)  
+- [Download Power BI File (.pbix)](Dashboard_stakeholder.pbix)  
+- [View Dashboard Screenshot](Production_Tracker_Dashboard.png)  
 
 ---
   
-Each folder contains:
-- `.pdf` export  
-- `.pbix` file (Power BI Desktop)  
-- Screenshots  
-
----
-
 ## 🗂️ Process Diagrams
 Current vs Future State
 -[Current vs Future Diagram](current_vs_future_diagram_v5.drawio.png) 
