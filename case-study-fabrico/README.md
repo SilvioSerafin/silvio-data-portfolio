@@ -53,4 +53,7 @@ Workflow Diagram
 
 
 ## 🔗 Notes
-Interactive Power BI links will be added once published to Power BI Service.
+This project is still in progress. Some features, dashboards, and diagrams are under active development and will be updated regularly.  
+The aim is to demonstrate end-to-end process tracking, data analysis, and reporting for a manufacturing environment.
+
+Interactive Power BI links will be added once published to the Power BI Service.
