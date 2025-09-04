@@ -20,7 +20,7 @@ It demonstrates how data analysis can transform production visibility, cost cont
 - Business Report showing how workflow tracking & data strategy can unlock **£90k+/year** in value  
 - Interactive Power BI dashboards (production tracker, stakeholder view)   
 - Workflow diagrams mapping current vs future state
-- 
+  
 ---
 
 ## 📄 Case Study Document
