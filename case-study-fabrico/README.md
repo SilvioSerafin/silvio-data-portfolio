@@ -29,9 +29,9 @@ It demonstrates how data analysis can transform production visibility, cost cont
 ---
 
 ## 📊 Dashboards
-- [View Dashboard (PDF)](Company_production_tracker.pdf)  
-- [Download Power BI File (.pbix)](Dashboard_stakeholder.pbix)  
-- [View Dashboard Screenshot](Production_Tracker_Dashboard.png)  
+- [View Dashboard (PDF)](case-study-fabrico/Company_production_tracker.pdf)  
+- [Download Power BI File (.pbix)](case-study-fabrico/Dashboard_stakeholder.pbix)   
+- [Dashboard Screenshot](case-study-fabrico/Production_Tracker_Dashboard.png)  
 
 ---
   
