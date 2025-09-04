@@ -41,7 +41,10 @@ Each folder contains:
 
 ---
 ## 🗂️ Process Diagrams
-Located in `/diagrams` (workflow, fluxogram, bottlenecks, current vs future state).
+ ## Current vs Future State
+-[Current vs Future Diagram](current_vs_future_diagram_v5.drawio.png) 
+## Workflow Diagram
+-[Workflow Diagram](worflow_diagram_v6.drawio.png)
 
 ---
 
