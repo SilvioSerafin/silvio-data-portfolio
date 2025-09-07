@@ -24,7 +24,7 @@ It demonstrates how data analysis can transform production visibility, cost cont
 ---
 
 ## 📄 Case Study Document
-- [Business Report](Business_report_v2.pdf) (full write-up)
+- [Business Report](Business_report_v3.pdf) (full write-up)
 - [View Presentation Slides](https://www.canva.com/design/DAGySezKVyU/APH4tG9Xm94iktLDXcCkEg/view?utm_content=DAGySezKVyU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2416f4e0eb)
 
 ---
