@@ -31,7 +31,7 @@ My focus is on:
 ---
 
 ### 🟦 [FabriCo Solutions: Data-Driven Process Improvement](./case-study-fabrico)
-**Tools:** SQL Server, Power BI, Excel, Workflow Mapping  
+**Tools:** Power BI, Excel, Workflow Mapping  
 - Built a production tracker for Shearfab’s manufacturing workflow.  
 - Automated job tracking and performance metrics for each stage of fabrication.  
 - Designed dashboards to monitor productivity, material flow, and cost efficiency.  
@@ -43,7 +43,7 @@ My focus is on:
 ## 🧰 Technical Skills
 | Category | Tools / Skills |
 |-----------|----------------|
-| **Data Analysis** | SQL, Excel, R, Python (pandas, matplotlib) |
+| **Data Analysis** | SQL, Excel, R |
 | **Data Visualization** | Power BI, Tableau |
 | **Database Management** | Microsoft SQL Server, MySQL |
 | **Analytics Methods** | Cleaning, Aggregation, KPI Design, Segmentation |
