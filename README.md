@@ -59,7 +59,7 @@ My focus is on:
 ---
 
 ## 💬 Let’s Connect
-📧 Email: **silvioserafinfilho@gmail.com**  
+📧 Email: **silviofh@hotmail.com**  
 🌐 LinkedIn: [linkedin.com/in/silvioserafin](https://linkedin.com/in/silvioserafin)  
 📊 Portfolio: [github.com/SilvioSerafin](https://github.com/SilvioSerafin)
 
