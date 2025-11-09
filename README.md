@@ -51,13 +51,6 @@ My focus is on:
 
 ---
 
-## 🎓 Certifications
-- **Google Data Analytics Professional Certificate** – [View Certificate](https://coursera.org/verify/professional-cert/6O0W4OOF3QBD)
-- **BSc (Hons) Computing Science** – Solent University (In Progress)
-- **Microsoft Power BI Fundamentals** (in progress)
-
----
-
 ## 💬 Let’s Connect
 📧 Email: **silviofh@hotmail.com**  
 🌐 LinkedIn: [linkedin.com/in/silvioserafin](https://linkedin.com/in/silvioserafin)  
