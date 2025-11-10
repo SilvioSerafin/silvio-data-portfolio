@@ -48,15 +48,16 @@ Analyze smart-device usage patterns to discover trends in users’ activity, sle
 
 ## 📄 Full Case Study Report
 
-Read the complete written report for detailed methodology, SQL documentation, and business insights:
+Read the complete written report for detailed methodology, SQL documentation, and business insights:\
 
-👉 [**Bellabeat Case Study – Full Report (Word)**](./Bellabeat_Case_Study.docx)
+👉 [**📄 View the Full Report (PDF)**](./Bellabeat_Case_Study.pdf)
 
 It includes:
 - End-to-end analysis (Ask → Prepare → Process → Analyze → Share → Act)  
 - Data exploration and cleaning procedures  
 - Executive summary with strategic recommendations  
 - Screenshots of the Power BI dashboards  
+- New product ideas (e.g., Smart Scale, Blue-Light Glasses, and MindEase app) derived from trend analysis
 
 ---
 
