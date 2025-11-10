@@ -6,7 +6,7 @@
 ---
 
 ## 📘 Project Overview
-This project analyzes **Fitbit user data** to uncover behavioral patterns and guide **Bellabeat’s product strategy** — a wellness technology company that builds smart devices for women.
+This project analyzes **Fitbit user data** to uncover behavioral patterns and guide **Bellabeat’s product strategy** , a wellness technology company that builds smart devices for women.
 
 Using **SQL Server** for cleaning, transformation, and analysis, and **Power BI** for visualization, this study identifies insights about activity, sleep, and sedentary behavior.  
 The outcomes informed two innovative product ideas aligned with Bellabeat’s mission of holistic well-being.
