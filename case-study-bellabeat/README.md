@@ -24,7 +24,7 @@ Analyze smart-device usage patterns to discover trends in users’ activity, sle
 |------|----------|
 | **Microsoft SQL Server (T-SQL)** | Data cleaning, transformation, and analysis |
 | **Power BI** | Interactive dashboard visualization |
-| **Excel / CSV** | Raw dataset management |
+| **Excel / CSV** | Source data management and preprocessing |
 | **GitHub** | Version control and documentation |
 
 ---
