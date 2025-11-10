@@ -1,0 +1,1 @@
+USE BellaBeat; GO WITH flags AS (SELECT a.activity_date, CASE WHEN a.TotalSteps < 5000 AND a.SedentaryMinutes > 900 THEN 1 ELSE 0 END AS low_move_flag FROM dbo.v_daily_activity a) SELECT CONVERT(decimal(5,1), 100.0 * SUM(low_move_flag) / NULLIF(COUNT(*),0)) AS pct_low_movement_days FROM flags;

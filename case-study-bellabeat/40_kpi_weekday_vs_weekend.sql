@@ -1,0 +1,1 @@
+USE BellaBeat; GO WITH wk AS (SELECT CASE WHEN DATENAME(WEEKDAY, a.activity_date) IN ('Saturday','Sunday') THEN 'Weekend' ELSE 'Weekday' END AS day_type, CAST(a.TotalSteps AS float) AS steps FROM dbo.v_daily_activity a) SELECT day_type, CONVERT(decimal(10,0), AVG(steps)) AS avg_steps FROM wk GROUP BY day_type;

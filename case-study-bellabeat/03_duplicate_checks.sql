@@ -1,0 +1,1 @@
+USE BellaBeat; GO SELECT Id, ActivityDate, COUNT(*) AS dupes FROM dbo.dailyActivity_merged2 GROUP BY Id, ActivityDate HAVING COUNT(*) > 1; SELECT Id, ActivityDay, COUNT(*) AS dupes FROM dbo.dailySteps_merged2 GROUP BY Id, ActivityDay HAVING COUNT(*) > 1; SELECT Id, SleepDay, COUNT(*) AS dupes FROM dbo.sleepDay_merged2 GROUP BY Id, SleepDay HAVING COUNT(*) > 1;

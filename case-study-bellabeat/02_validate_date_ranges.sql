@@ -1,0 +1,1 @@
+USE BellaBeat; GO SELECT 'dailyActivity_merged2' AS tbl, MIN(ActivityDate), MAX(ActivityDate) FROM dbo.dailyActivity_merged2 UNION ALL SELECT 'dailySteps_merged2', MIN(ActivityDay), MAX(ActivityDay) FROM dbo.dailySteps_merged2 UNION ALL SELECT 'sleepDay_merged2', MIN(SleepDay), MAX(SleepDay) FROM dbo.sleepDay_merged2;

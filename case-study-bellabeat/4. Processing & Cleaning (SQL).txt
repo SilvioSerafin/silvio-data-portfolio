@@ -1,0 +1,222 @@
+4. Processing & Cleaning (SQL)
+4.1 Quick profiling (row counts, distinct users):
+-- Row counts and distinct users by table
+SELECT 'dailyActivity_merged2' AS tbl, COUNT(*) AS rows, COUNT(DISTINCT Id) AS users FROM BellaBeat.dbo.dailyActivity_merged2
+UNION ALL SELECT 'dailySteps_merged2',       COUNT(*), COUNT(DISTINCT Id) FROM BellaBeat.dbo.dailySteps_merged2
+UNION ALL SELECT 'dailyIntensities_merged2', COUNT(*), COUNT(DISTINCT Id) FROM BellaBeat.dbo.dailyIntensities_merged2
+UNION ALL SELECT 'sleepDay_merged2',         COUNT(*), COUNT(DISTINCT Id) FROM BellaBeat.dbo.sleepDay_merged2
+UNION ALL SELECT 'weightLogInfo_merged2',    COUNT(*), COUNT(DISTINCT Id) FROM BellaBeat.dbo.weightLogInfo_merged2;
+4.2 Date range sanity checks:
+-- Date ranges (adjust column names if needed)
+SELECT MIN(ActivityDate) AS min_date, MAX(ActivityDate) AS max_date
+FROM BellaBeat.dbo.dailyActivity_merged2;
+
+SELECT MIN(ActivityDay) AS min_date, MAX(ActivityDay) AS max_date
+FROM BellaBeat.dbo.dailySteps_merged2;
+
+SELECT MIN(SleepDay) AS min_date, MAX(SleepDay) AS max_date
+FROM BellaBeat.dbo.sleepDay_merged2;
+4.3 Duplicate checks on (Id, Date) keys:
+-- Activity duplicates
+SELECT Id, ActivityDate, COUNT(*) AS dupes
+FROM BellaBeat.dbo.dailyActivity_merged2
+GROUP BY Id, ActivityDate
+HAVING COUNT(*) > 1;
+
+-- Sleep duplicates
+SELECT Id, SleepDay, COUNT(*) AS dupes
+FROM BellaBeat.dbo.sleepDay_merged2
+GROUP BY Id, SleepDay
+HAVING COUNT(*) > 1;
+
+-- Steps duplicates
+SELECT Id, ActivityDay, COUNT(*) AS dupes
+FROM BellaBeat.dbo.dailySteps_merged2
+GROUP BY Id, ActivityDay
+HAVING COUNT(*) > 1;
+4.4 Clean, cast dates, and drop duplicates in views:
+
+CREATE OR ALTER VIEW dbo.v_daily_activity AS
+SELECT
+    Id,
+    CAST(ActivityDate AS date) AS activity_date,
+    TotalSteps,
+    TotalDistance,
+    VeryActiveMinutes,
+    FairlyActiveMinutes,
+    LightlyActiveMinutes,
+    SedentaryMinutes,
+    Calories
+FROM (
+    SELECT *,
+           ROW_NUMBER() OVER (PARTITION BY Id, ActivityDate ORDER BY (SELECT NULL)) AS rn
+    FROM dbo.dailyActivity_merged2
+) d
+WHERE rn = 1;
+GO
+
+
+CREATE OR ALTER VIEW dbo.v_daily_steps AS
+SELECT
+    Id,
+    CAST(ActivityDay AS date) AS activity_date,
+    StepTotal AS Steps
+FROM (
+    SELECT *,
+           ROW_NUMBER() OVER (PARTITION BY Id, ActivityDay ORDER BY (SELECT NULL)) AS rn
+    FROM dbo.dailySteps_merged2
+) x
+WHERE rn = 1;
+GO
+4.5 Optional date dimension (weekday, month):]
+
+CREATE OR ALTER VIEW dbo.v_dim_date
+AS
+WITH bounds AS (
+    SELECT MIN(activity_date) AS dmin, MAX(activity_date) AS dmax
+    FROM dbo.v_daily_activity
+),
+cal AS (
+    SELECT dmin AS d FROM bounds
+    UNION ALL
+    SELECT DATEADD(DAY, 1, c.d)
+    FROM cal c
+    CROSS JOIN bounds b
+    WHERE c.d < b.dmax
+)
+SELECT 
+    d,
+    DATENAME(WEEKDAY, d) AS weekday_name,
+    DATEPART(WEEKDAY, d) AS weekday_num,
+    DATEPART(MONTH,  d)  AS month_num
+FROM cal;
+GO
+5. Analytical Modeling (SQL)
+5.1 Daily trends: steps vs calories:
+-- Average steps and calories by day (useful for a time-series visual)
+SELECT 
+  a.activity_date,
+  AVG(CAST(a.TotalSteps AS float))   AS avg_steps,
+  AVG(CAST(a.Calories   AS float))   AS avg_calories
+FROM BellaBeat.dbo.v_daily_activity a
+GROUP BY a.activity_date
+ORDER BY a.activity_date;
+5.2 Weekday patterns:
+-- Weekday averages for steps, sedentary minutes, calories
+SELECT 
+  d.weekday_name,
+  AVG(CAST(a.TotalSteps        AS float)) AS avg_steps,
+  AVG(CAST(a.SedentaryMinutes  AS float)) AS avg_sedentary_min,
+  AVG(CAST(a.Calories          AS float)) AS avg_cal
+FROM BellaBeat.dbo.v_daily_activity a
+JOIN BellaBeat.dbo.v_dim_date d
+  ON a.activity_date = d.d
+GROUP BY d.weekday_name, d.weekday_num
+ORDER BY d.weekday_num;
+5.3 Activity mix distribution (percentiles for very active minutes):
+-- Percentiles require window functions; here we approximate via PERCENTILE_CONT 
+SELECT DISTINCT
+  PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY CAST(VeryActiveMinutes AS float)) OVER() AS p50_very_active,
+  PERCENTILE_CONT(0.9) WITHIN GROUP (ORDER BY CAST(VeryActiveMinutes AS float)) OVER() AS p90_very_active
+FROM BellaBeat.dbo.v_daily_activity;
+5.4 Sleep ↔ Activity relationship (paired by date):
+-- Sleep (minutes -> hours), rounded to 1 decimal
+WITH ds AS (
+  SELECT 
+    a.Id, a.activity_date,
+    a.TotalSteps,
+    a.Calories,
+    s.TotalMinutesAsleep,
+    s.TotalTimeInBed
+  FROM BellaBeat.dbo.v_daily_activity a
+  LEFT JOIN BellaBeat.dbo.v_sleep s
+    ON a.Id = s.Id AND a.activity_date = s.sleep_date
+)
+SELECT 
+  CONVERT(decimal(10,1), AVG(CAST(TotalMinutesAsleep AS float)) / 60.0) AS avg_sleep_hours,
+  CONVERT(decimal(10,1), AVG(CAST(TotalTimeInBed    AS float)) / 60.0) AS avg_time_in_bed_hours,
+  CONVERT(decimal(10,1), AVG(CAST(TotalSteps        AS float)))        AS avg_steps,
+  CONVERT(decimal(10,1), AVG(CAST(Calories          AS float)))        AS avg_cal
+FROM ds;
+5.5 User movement segments (for targeted features):
+-- Segment users by their typical steps
+WITH user_days AS (
+  SELECT 
+    Id,
+    AVG(CAST(TotalSteps       AS float)) AS avg_steps,
+    AVG(CAST(SedentaryMinutes AS float)) AS avg_sedentary,
+    AVG(CAST(VeryActiveMinutes AS float)) AS avg_very_active,
+    AVG(CAST(Calories         AS float)) AS avg_cal
+  FROM BellaBeat.dbo.v_daily_activity
+  GROUP BY Id
+)
+SELECT 
+  CASE 
+    WHEN avg_steps >= 10000 THEN 'High movers (10k+)'
+    WHEN avg_steps BETWEEN 5000 AND 9999 THEN 'Moderate movers (5k–10k)'
+    ELSE 'Low movers (<5k)'
+  END AS segment,
+  COUNT(*) AS users
+FROM user_days
+GROUP BY CASE 
+    WHEN avg_steps >= 10000 THEN 'High movers (10k+)'
+    WHEN avg_steps BETWEEN 5000 AND 9999 THEN 'Moderate movers (5k–10k)'
+    ELSE 'Low movers (<5k)'
+  END
+ORDER BY users DESC;
+5.6 Burnout / irregular-schedule signals (for MindEase targeting):
+WITH day_flags AS (
+  SELECT a.Id, a.activity_date,
+         CASE WHEN a.TotalSteps<5000 AND a.SedentaryMinutes>900 THEN 1 ELSE 0 END AS low_move_flag
+  FROM dbo.v_daily_activity a
+),
+agg AS (
+  SELECT Id,
+         COUNT(*) AS total_days,
+         SUM(low_move_flag) AS low_move_days
+  FROM day_flags
+  GROUP BY Id
+)
+SELECT Id, total_days, low_move_days,
+       CONVERT(decimal(5,2),100.0*low_move_days/NULLIF(total_days,0)) AS pct_low_move_days
+FROM agg
+ORDER BY pct_low_move_days DESC;
+
+5.7 Output tables for BI (optional materialized views):
+
+CREATE OR ALTER VIEW dbo.v_daily_user_summary AS
+SELECT
+  a.Id,
+  a.activity_date,
+  a.TotalSteps,
+  a.SedentaryMinutes,
+  a.VeryActiveMinutes,
+  a.Calories,
+  s.TotalMinutesAsleep,
+  s.TotalTimeInBed
+FROM dbo.v_daily_activity a
+LEFT JOIN dbo.v_sleep s
+  ON a.Id = s.Id
+ AND a.activity_date = s.sleep_date;
+GO
+
+-- User segment view
+USE BellaBeat;
+GO
+
+CREATE OR ALTER VIEW dbo.v_user_segments AS
+SELECT
+    u.Id,
+    CASE
+        WHEN u.avg_steps >= 10000 THEN 'High movers (10k+)'
+        WHEN u.avg_steps BETWEEN 5000 AND 9999 THEN 'Moderate movers (5k–10k)'
+        ELSE 'Low movers (<5k)'
+    END AS movement_segment
+FROM (
+    SELECT
+        Id,
+        AVG(CAST(TotalSteps AS float)) AS avg_steps
+    FROM dbo.v_daily_activity
+    GROUP BY Id
+) AS u;
+GO

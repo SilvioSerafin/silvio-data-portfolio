@@ -1,0 +1,1 @@
+USE BellaBeat; GO CREATE OR ALTER VIEW dbo.v_daily_steps AS WITH ranked AS (SELECT *, ROW_NUMBER() OVER (PARTITION BY Id, ActivityDay ORDER BY ActivityDay) AS rn FROM dbo.dailySteps_merged2) SELECT Id, CAST(ActivityDay AS date) AS activity_date, StepTotal AS Steps FROM ranked WHERE rn = 1;

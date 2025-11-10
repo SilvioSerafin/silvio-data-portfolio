@@ -1,0 +1,1 @@
+USE BellaBeat; GO SELECT d.weekday_name, AVG(CAST(a.TotalSteps AS float)) AS avg_steps, AVG(CAST(a.SedentaryMinutes AS float)) AS avg_sedentary_min, AVG(CAST(a.Calories AS float)) AS avg_cal FROM dbo.v_daily_activity a JOIN dbo.v_dim_date d ON a.activity_date = d.d GROUP BY d.weekday_name, d.weekday_num ORDER BY d.weekday_num;

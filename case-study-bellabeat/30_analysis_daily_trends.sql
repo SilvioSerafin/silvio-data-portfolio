@@ -1,0 +1,1 @@
+USE BellaBeat; GO SELECT a.activity_date, AVG(CAST(a.TotalSteps AS float)) AS avg_steps, AVG(CAST(a.Calories AS float)) AS avg_calories FROM dbo.v_daily_activity a GROUP BY a.activity_date ORDER BY a.activity_date;

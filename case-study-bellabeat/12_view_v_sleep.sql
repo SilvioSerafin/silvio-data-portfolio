@@ -1,0 +1,1 @@
+USE BellaBeat; GO CREATE OR ALTER VIEW dbo.v_sleep AS WITH ranked AS (SELECT *, ROW_NUMBER() OVER (PARTITION BY Id, SleepDay ORDER BY SleepDay) AS rn FROM dbo.sleepDay_merged2) SELECT Id, CAST(SleepDay AS date) AS sleep_date, TotalSleepRecords, TotalMinutesAsleep, TotalTimeInBed FROM ranked WHERE rn = 1;
