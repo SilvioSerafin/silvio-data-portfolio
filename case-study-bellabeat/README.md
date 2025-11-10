@@ -50,7 +50,7 @@ Analyze smart-device usage patterns to discover trends in users’ activity, sle
 
 Read the complete written report for detailed methodology, SQL documentation, and business insights:\
 
-👉 [**📄 View the Full Report (PDF)**](./Bellabeat_Case_Study.pdf)
+👉 [**📄 View the Full Report (PDF)**](./Bellabeat_Case_Study_V1.pdf)
 
 It includes:
 - End-to-end analysis (Ask → Prepare → Process → Analyze → Share → Act)  
