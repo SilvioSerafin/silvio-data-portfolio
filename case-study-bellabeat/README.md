@@ -85,7 +85,7 @@ Interactive visuals built from the SQL pipeline highlight:
 - User movement segmentation  
 
 📄 **Preview:**  
-[** Bellabeat Dashboard**](./bellabeat_dashboads_V1.pdf)
+[View Bellabeat Dashboard](./bellabeat_dashboads_V1.pdf)
 
 ---
 
