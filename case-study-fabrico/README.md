@@ -1,61 +1,75 @@
 # FabriCo Solutions — Data-Driven Process Improvement
 
-**Role:** Fabricator | Aspiring Business Analyst  
-**Tools:** Power BI, Excel  
-
-This is my flagship case study based on my workplace experience.  
-It demonstrates how data analysis can transform production visibility, cost control, and workflow efficiency.
+**Tools:** SQL (T-SQL) · Power BI · Excel · Draw.io
+**Role:** Welder · Ex-Quality Engineer · 12+ years in manufacturing
 
 ---
 
-## 🛠 Skills Demonstrated  
-- **Data Analysis:** Excel, DAX  
-- **Data Visualization:** Power BI dashboards, automated reporting  
-- **Business Analysis:** Workflow mapping, cost tracking, bottleneck analysis  
-- **Professional Reporting:** Case study, strategic insights, compliance research
+## Overview
+
+FabriCo is a fictional sheet metal fabrication company modelled on
+real shop floor experience. The business produces electrical panels
+and enclosures for utility infrastructure clients.
+
+The core problem: no live job tracking, paper-based job cards,
+no cost visibility per job, and bottlenecks only spotted after
+they cause delays.
+
+This case study demonstrates how a data strategy built around
+job tracking, operator performance, and material costs can
+transform visibility and decision-making in a manufacturing business.
 
 ---
 
-### 🚀 Highlights  
-- Business Report showing how workflow tracking & data strategy can unlock **£90k+/year** in value  
-- Interactive Power BI dashboards (production tracker, stakeholder view)   
-- Workflow diagrams mapping current vs future state
-  
----
+## What Was Built
 
-## 📄 Case Study Document
-- [Business Report](Business_report_v3.pdf) (full write-up)
-- [Business Report – Short Version](Business_report_short_version.pdf)
-- [Roadmap & ROI Analysis](roadmap_barcode_costs.pdf)
-- [View Presentation Slides](https://www.canva.com/design/DAGySezKVyU/APH4tG9Xm94iktLDXcCkEg/view?utm_content=DAGySezKVyU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2416f4e0eb)
+**SQL Database**
 
----
+An 8-table production database built in SQL Server covering the
+full job lifecycle from sales order to dispatch. The schema includes
+jobs, operators, departments, job scans, materials, stock, and clients.
+The dataset covers a full year of production (240 jobs, 1,380 scan
+events) with real manufacturing problems baked in — rework, drawing
+issues, parts missing, tool wait times, and operator experience gaps.
 
-## 📊 Dashboards
-- [View Dashboard (PDF)](company_production_tracker.pdf)  
-- [Download Power BI File (.pbix)](dashboard_stakeholder.pbix) 
-- [Dashboard Screenshot](productiontracker_fabrico_ss.png) 
+- [View SQL folder](https://github.com/SilvioSerafin/silvio-data-portfolio/tree/main/sql)
 
----
-  
-## 🗂️ Process Diagrams
-Current vs Future State
--[Current vs Future Diagram](current_vs_future_diagram_v5.drawio.png) 
+**Power BI Dashboards**
 
-Workflow Diagram
--[Workflow Diagram](worflow_diagram_v6.drawio.png)
+- [Production Tracker (PDF)](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/company_production_tracker.pdf)
+- [Dashboard Screenshot](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/productiontracker_fabrico_ss.png)
+- [Stakeholder Dashboard (.pbix)](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/dashboard_stakeholder.pbix)
 
-Kanban Replenishment
--[Kanban Replenishment](kanban_replenishment_flow_v2.drawio.png)
+**Business Report**
 
-RoadMap Gantt Chart
--[RoadMap Gantt Chart](Project_timeline_gantt_v1.png)
+- [Business Report](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/Business_report_v3.pdf)
+- [Roadmap and Barcode Costs](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/roadmap_barcode_costs.pdf)
+
+**Process Diagrams**
+
+- [Current vs Future State](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/current_vs_future_diagram_v5.drawio.png)
+- [Workflow Diagram](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/worflow_diagram_v6.drawio.png)
+- [Kanban Replenishment](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/kanban_replenishment_flow_v2.drawio.png)
+- [Roadmap Gantt Chart](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/Project_timeline_gantt_v1.png)
 
 ---
 
+## Key Findings
 
-## 🔗 Notes
-This project is still in progress. Some features, dashboards, and diagrams are under active development and will be updated regularly.  
-The aim is to demonstrate end-to-end process tracking, data analysis, and reporting for a manufacturing environment.
+- £90k+/year in potential value identified through workflow tracking and cost analysis
+- Newer welders produce significantly more rework on jobs where drawings are basic layout only
+- Drawing detail level is the single biggest driver of cycle time overrun across all departments
+- Welding is the primary bottleneck department
 
-Interactive Power BI links will be added once published to the Power BI Service.
+---
+
+## Skills Demonstrated
+
+- SQL: schema design, CTEs, window functions, multi-table JOINs
+- Power BI: dashboard design, DAX measures, KPI reporting
+- Business analysis: workflow mapping, bottleneck identification, ROI calculation, process improvement strategy
+- Domain knowledge: sheet metal fabrication, QA, production flow
+
+---
+
+⚡ SQL analysis is in progress and being added to the sql/ folder regularly. Power BI interactive links will be added once published to the Power BI Service.
