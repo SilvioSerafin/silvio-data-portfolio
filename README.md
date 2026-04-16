@@ -1,4 +1,4 @@
-# Data Analytics Portfolio — Jack Black
+# Data Analytics Portfolio
 
 SQL · Power BI · Manufacturing Analytics
 
