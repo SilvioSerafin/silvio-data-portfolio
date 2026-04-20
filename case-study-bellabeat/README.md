@@ -1,7 +1,7 @@
-# Bellabeat Wellness — Smart Device Behaviour Analysis
+# Bellabeat Wellness - Smart Device Behaviour Analysis
 
 **Tools:** SQL (T-SQL) · Power BI · Excel  
-**Role:** Data Analyst — Google Data Analytics Certificate Capstone
+**Role:** Data Analyst - Google Data Analytics Certificate Capstone
 
 ---
 
@@ -9,7 +9,7 @@
 
 Bellabeat is a health-tech company that manufactures wellness products for women. This case study analyses smart device usage data from 33 Fitbit users to uncover behavioural patterns in activity, sleep, and sedentary habits.
 
-The core problem: Bellabeat needed data-driven evidence to guide product development and marketing strategy for its Time smartwatch — specifically, understanding how women actually move, sleep, and recover across the week.
+The core problem: Bellabeat needed data-driven evidence to guide product development and marketing strategy for its Time smartwatch - specifically, understanding how women actually move, sleep, and recover across the week.
 
 This case study demonstrates how a structured SQL pipeline, from raw CSV profiling through to BI-ready views and window function analysis, can turn noisy fitness tracker data into actionable product and marketing intelligence.
 
@@ -18,9 +18,9 @@ This case study demonstrates how a structured SQL pipeline, from raw CSV profili
 ## What Was Built
 
 ### SQL Pipeline
-A 28-script T-SQL pipeline covering the full analytical workflow — data profiling, deduplication, date dimension, trend analysis, KPI queries, BI output views, and window function analysis.
+A 28-script T-SQL pipeline covering the full analytical workflow - data profiling, deduplication, date dimension, trend analysis, KPI queries, BI output views, and window function analysis.
 
-The dataset covers 33 users across approximately 33 days (April–May 2016), with confirmed duplicates, inconsistent date formats, and a 9-user sleep data gap — all handled in the cleaning layer.
+The dataset covers 33 users across approximately 33 days (April–May 2016), with confirmed duplicates, inconsistent date formats, and a 9-user sleep data gap - all handled in the cleaning layer.
 
 - [View SQL folder](./sql)
 
@@ -42,11 +42,11 @@ End-to-end written report covering methodology, findings, and product recommenda
 
 ## Key Findings
 
-- Average daily steps ~7,600 — below the NHS-recommended 10,000
-- Weekday vs weekend steps differ by only 0.7% — users are equally active every day of the week, driven by caregiving and domestic responsibilities rather than structured exercise
-- ~40 minutes wasted in bed per night — sleep onset is consistently poor across the user base
+- Average daily steps ~7,600 - below the NHS-recommended 10,000
+- Weekday vs weekend steps differ by only 0.7% - users are equally active every day of the week, driven by caregiving and domestic responsibilities rather than structured exercise
+- ~40 minutes wasted in bed per night - sleep onset is consistently poor across the user base
 - 22.9% of all activity days meet the low-movement threshold (under 5,000 steps and over 15 hours sedentary)
-- Users sleeping under 6 hours still average higher daily steps than longer sleepers — persistent activity despite fatigue
+- Users sleeping under 6 hours still average higher daily steps than longer sleepers - persistent activity despite fatigue
 
 ---
 
@@ -54,11 +54,11 @@ End-to-end written report covering methodology, findings, and product recommenda
 
 Three opportunities identified directly from the data:
 
-**Bellabeat Smart Scale** — Body composition and hydration tracking synced with the app, providing cycle-aware insights beyond body weight.
+**Bellabeat Smart Scale** - Body composition and hydration tracking synced with the app, providing cycle-aware insights beyond body weight.
 
-**Bellabeat BlueShield Glasses** — Blue-light blocking eyewear targeting the ~40 minutes of wasted pre-sleep bed time identified in the data.
+**Bellabeat BlueShield Glasses** - Blue-light blocking eyewear targeting the ~40 minutes of wasted pre-sleep bed time identified in the data.
 
-**Connected Wellness Platform** — Full ecosystem integration across all Bellabeat devices enabling cross-device adaptive insights.
+**Connected Wellness Platform** - Full ecosystem integration across all Bellabeat devices enabling cross-device adaptive insights.
 
 ---
 
@@ -71,5 +71,5 @@ Three opportunities identified directly from the data:
 
 ---
 
-*Dataset: FitBit Fitness Tracker Data (CC0: Public Domain) via Kaggle / Mobius — 33 users, April–May 2016.*  
+*Dataset: FitBit Fitness Tracker Data (CC0: Public Domain) via Kaggle / Mobius - 33 users, April–May 2016.*  
 *All SQL, modelling, and visualisation work designed and implemented by Silvio Serafin.*
