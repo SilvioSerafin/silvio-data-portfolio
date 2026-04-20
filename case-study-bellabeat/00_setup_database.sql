@@ -1,1 +1,0 @@
-IF DB_ID('BellaBeat') IS NULL CREATE DATABASE BellaBeat; GO USE BellaBeat; GO
