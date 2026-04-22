@@ -61,7 +61,7 @@ Inspection completions fall below the 30-job monthly target in August, November,
 ## Recommendations
 
 1. **Increase planned maintenance in Q3** to reduce reactive workload in Q4 when capacity is lower.
-2. **Pre-emptive resource planning for winter** — November and December consistently underperform across all KPIs.
+2. **Pre-emptive resource planning for winter**  November and December consistently underperform across all KPIs.
 3. **Set an early warning threshold** at 4.5 days response time to flag SLA breach risk before it occurs.
 
 ---
