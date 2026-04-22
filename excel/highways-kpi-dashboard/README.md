@@ -48,13 +48,13 @@ All data flows dynamically updating the Raw Data sheet automatically recalculate
 Repair completions peak in spring and early summer (May: 173, June: 168) and decline significantly in winter months (December: 128). This reflects increased road damage from frost cycles combined with reduced operational capacity in cold weather.
 
 ### Response Time Deterioration in Q4
-Average response time worsens progressively from September onwards, reaching 5.4 days in December — breaching the 5-day target. This suggests a resource capacity issue in Q4 rather than a demand problem.
+Average response time worsens progressively from September onwards, reaching 5.4 days in December, breaching the 5-day target. This suggests a resource capacity issue in Q4 rather than a demand problem.
 
 ### Reactive vs Planned Maintenance Imbalance
 Reactive maintenance jobs consistently run at 2.5–3x the volume of planned maintenance. The division is operating largely reactively, which is less efficient and more costly long term.
 
 ### Inspection and SLA Performance
-Inspection completions fall below the 30-job monthly target in August, November, and December. Complaints resolved within SLA drops to 79% in December — directly linked to slower response times.
+Inspection completions fall below the 30-job monthly target in August, November, and December. Complaints resolved within SLA drops to 79% in December,directly linked to slower response times.
 
 ---
 
