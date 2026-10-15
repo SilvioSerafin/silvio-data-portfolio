@@ -1,4 +1,4 @@
-# FabriCo — SQL Analysis
+# FabriCo SQL Analysis
 
 T-SQL queries analysing production data for FabriCo Solutions,
 a fictional sheet metal fabrication company modelled on real
