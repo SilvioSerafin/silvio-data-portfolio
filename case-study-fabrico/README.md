@@ -18,7 +18,7 @@ FabriCo is a fictional sheet metal fabrication company. The business and all of 
 
 An 8-table production database in SQL Server covering the job lifecycle from sales order to dispatch: jobs, operators, departments, job scans, materials, job materials, stock and clients. The simulated dataset covers one year: 240 jobs and 1,380 scan events, with rework, drawing issues, missing parts and tool wait times included.
 
-* [SQL analysis queries](https://github.com/SilvioSerafin/silvio-data-portfolio/tree/main/sql/fabrico)
+* [SQL analysis queries](https://github.com/SilvioSerafin/silvio-data-portfolio/tree/main/case-study-fabrico/sql)
 
 ### Power BI dashboards
 
