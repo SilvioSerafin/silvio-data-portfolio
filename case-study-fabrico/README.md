@@ -1,75 +1,59 @@
-# FabriCo Solutions — Data-Driven Process Improvement
+# FabriCo Solutions: Data-Driven Process Improvement
 
-**Tools:** SQL (T-SQL) · Power BI · Excel · Draw.io
-**Role:** Welder · Ex-Quality Engineer · 12+ years in manufacturing
+**Tools:** SQL (T-SQL, SQL Server) | Power BI | Excel | Draw.io
 
----
+Built by Silvio Serafin, Quality Engineer (8 years, ISO 9001 implementation, corrective actions, continuous improvement) now working in sheet metal fabrication.
 
 ## Overview
 
-FabriCo is a fictional sheet metal fabrication company modelled on
-real shop floor experience. The business produces electrical panels
-and enclosures for utility infrastructure clients.
+FabriCo is a fictional sheet metal fabrication company. The business and all of its data are simulated. Findings show how the analysis works, not measured results from a real business.
 
-The core problem: no live job tracking, paper-based job cards,
-no cost visibility per job, and bottlenecks only spotted after
-they cause delays.
+**The business problem:** paper job cards, no cost visibility per job, and bottlenecks that are only noticed after they cause delays.
 
-This case study demonstrates how a data strategy built around
-job tracking, operator performance, and material costs can
-transform visibility and decision-making in a manufacturing business.
+**The question:** how can job tracking, rework data and material costs give a manufacturing business visibility and better decisions?
 
----
+## What was built
 
-## What Was Built
+### SQL database
 
-**SQL Database**
+An 8-table production database in SQL Server covering the job lifecycle from sales order to dispatch: jobs, operators, departments, job scans, materials, job materials, stock and clients. The simulated dataset covers one year: 240 jobs and 1,380 scan events, with rework, drawing issues, missing parts and tool wait times included.
 
-An 8-table production database built in SQL Server covering the
-full job lifecycle from sales order to dispatch. The schema includes
-jobs, operators, departments, job scans, materials, stock, and clients.
-The dataset covers a full year of production (240 jobs, 1,380 scan
-events) with real manufacturing problems baked in — rework, drawing
-issues, parts missing, tool wait times, and operator experience gaps.
+* [SQL analysis queries](https://github.com/SilvioSerafin/silvio-data-portfolio/tree/main/sql/fabrico)
 
-- [View SQL folder](https://github.com/SilvioSerafin/silvio-data-portfolio/tree/main/sql)
+### Power BI dashboards
 
-**Power BI Dashboards**
+* [Production Tracker (PDF)](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/company_production_tracker.pdf)
+* [Dashboard screenshot](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/productiontracker_fabrico_ss.png)
+* [Stakeholder dashboard (.pbix, needs Power BI Desktop)](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/dashboard_stakeholder.pbix)
 
-- [Production Tracker (PDF)](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/company_production_tracker.pdf)
-- [Dashboard Screenshot](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/productiontracker_fabrico_ss.png)
-- [Stakeholder Dashboard (.pbix)](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/dashboard_stakeholder.pbix)
+### Process diagrams
 
-**Business Report**
+* [Current vs future state](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/current_vs_future_diagram_v5.drawio.png)
+* [Workflow diagram](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/worflow_diagram_v6.drawio.png)
+* [Kanban replenishment](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/kanban_replenishment_flow_v2.drawio.png)
 
-- [Business Report](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/Business_report_v3.pdf)
-- [Roadmap and Barcode Costs](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/roadmap_barcode_costs.pdf)
+## What the analysis looks at
 
-**Process Diagrams**
+* Rework by drawing detail level and process stage
+* Cycle time, planned against actual, by department
+* Bottleneck identification across the production line
+* Material cost per job and jobs over budget
+* On-time delivery performance
 
-- [Current vs Future State](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/current_vs_future_diagram_v5.drawio.png)
-- [Workflow Diagram](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/worflow_diagram_v6.drawio.png)
-- [Kanban Replenishment](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/kanban_replenishment_flow_v2.drawio.png)
-- [Roadmap Gantt Chart](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/Project_timeline_gantt_v1.png)
+## Status: rebuild in progress
 
----
+This project is being rebuilt as a fuller quality analytics project:
 
-## Key Findings
+* Schema and seed script so anyone can recreate the database
+* More realistic simulated data, with natural variation
+* Non-conformance (NCR) and corrective action tracking
+* SPC charts and Pareto analysis
+* A dashboard covering rework, overruns and on-time delivery
+* A short, sourced business case with stated assumptions
 
-- £90k+/year in potential value identified through workflow tracking and cost analysis
-- Newer welders produce significantly more rework on jobs where drawings are basic layout only
-- Drawing detail level is the single biggest driver of cycle time overrun across all departments
-- Welding is the primary bottleneck department
+## Skills demonstrated
 
----
-
-## Skills Demonstrated
-
-- SQL: schema design, CTEs, window functions, multi-table JOINs
-- Power BI: dashboard design, DAX measures, KPI reporting
-- Business analysis: workflow mapping, bottleneck identification, ROI calculation, process improvement strategy
-- Domain knowledge: sheet metal fabrication, QA, production flow
-
----
-
-⚡ SQL analysis is in progress and being added to the sql/ folder regularly. Power BI interactive links will be added once published to the Power BI Service.
+* **SQL:** schema design, CTEs, multi-table joins, aggregation
+* **Power BI:** dashboard design, DAX measures, KPI reporting
+* **Business analysis:** workflow mapping, bottleneck identification, process improvement
+* **Domain:** quality engineering, sheet metal fabrication, production flow
