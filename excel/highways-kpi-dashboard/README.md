@@ -36,7 +36,7 @@ All data flows dynamically updating the Raw Data sheet automatically recalculate
 
 | Sheet | Purpose |
 |-------|---------|
-| **Raw Data** | Monthly data entry — all input figures entered here |
+| **Raw Data** | Monthly data entry - all input figures entered here |
 | **KPI Dashboard** | Summary cards with RAG status + full monthly breakdown table |
 | **Trend Analysis** | Three charts visualising performance trends across the year |
 

@@ -1,7 +1,7 @@
 /*
 ================================================================
   FILE    : 16_view_v_fact_daily.sql
-  PURPOSE : Consolidated daily fact view — the primary data
+  PURPOSE : Consolidated daily fact view - the primary data
             source for the Power BI dashboard. Joins activity
             and sleep, adds day type classification and
             pre-calculated sleep efficiency for direct use
