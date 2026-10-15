@@ -1,98 +1,57 @@
-# Data Analytics Portfolio
+Data Analytics Portfolio
 
-SQL · Power BI · Manufacturing Analytics
+SQL | Power BI | Manufacturing Analytics
 
----
+About
 
-## About
+Quality Engineer (8 years: ISO 9001 implementation, corrective actions, continuous improvement, document control) and hands-on fabricator, building manufacturing analytics with SQL and Power BI.
 
-Welder and ex-Quality Engineer with 12+ years on the shop floor,
-now building a career in data analytics and business intelligence.
+I know what it means when cycle times spike, when rework patterns repeat, or when a job costs more than it was quoted. These projects use that knowledge to turn production data into decisions.
 
-I bring domain knowledge that most analysts don't have. I don't
-just query manufacturing data . I understand what it means when
-cycle times spike, when rework patterns repeat, or when a job
-costs more than it was quoted.
+BSc Computer Science (in progress) | Google Data Analytics Professional Certificate
 
-My manufacturing background isn't a career gap. It's what makes
-the analysis mean something.
+Projects
+FabriCo: Manufacturing Process Analytics
 
-Google Data Analyst certified · BSc (Hons) Computing Science (in progress)
+Tools: SQL (T-SQL, SQL Server) | Power BI | Excel | Draw.io
 
----
+A simulated sheet metal fabrication business used to practise end-to-end manufacturing analytics. All data is simulated, so findings show how the analysis works, not measured results.
 
-## Projects
+8-table SQL Server database covering the job lifecycle (240 jobs, 1,380 scan events)
+SQL analyses of rework, cycle time overruns, bottlenecks and material costs
+Power BI production tracker and stakeholder dashboard
+Process diagrams: current vs future state, Kanban replenishment, bottleneck mapping
 
-### FabriCo Solutions — Data-Driven Process Improvement
+Case study | SQL analysis | Dashboard screenshot
 
-**Tools:** SQL (T-SQL) · Power BI · Excel · Draw.io
+Status: being rebuilt with a schema and seed script, more realistic data, non-conformance (NCR) tracking, SPC charts and a fuller dashboard.
 
-A full end-to-end case study built on a real manufacturing workflow.
-FabriCo is a fictional sheet metal fabrication company modelled on
-real shop floor experience. Electrical panels and enclosures for
-utility infrastructure clients.
+Highways and Engineering KPI Dashboard
 
-**Business context:** No live job tracking, paper-based job cards,
-no cost visibility per job, bottlenecks invisible until they cause delays.
+Tools: Excel
 
-**What was built:**
+An Excel workbook modelled on UK local authority performance reporting: 6 KPIs across 12 months, RAG status cards, trend charts and written recommendations.
 
-- 8-table SQL database schema (jobs, operators, departments,
-  job scans, materials, stock, clients) with a full year of
-  production data (240 jobs, 1,380 scan events)
-- SQL queries analysing rework rates, cycle time overruns,
-  operator performance, drawing quality impact, and material costs
-- Power BI production tracker and stakeholder dashboard
-- Workflow diagrams: current vs future state, Kanban replenishment,
-  bottleneck mapping
-- Business report with £92k+/year in identified value
-- Implementation roadmap (Gantt chart)
+View project
 
-**Key findings (SQL analysis):**
+Bellabeat SQL Case Study
 
-- Newer welders produce 3x more rework than senior welders
-  on jobs with basic layout drawings only
-- Drawing quality (basic layout vs detailed spec) is the single
-  biggest driver of cycle time overrun across all departments
-- Welding is the primary bottleneck department, average
-  actual duration runs 40% over planned on large panel jobs
+Google Data Analytics capstone project
 
-[Business Report](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/Business_report_v3.pdf) ·
-[Dashboard Screenshot](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-fabrico/productiontracker_fabrico_ss.png) ·
-[SQL Folder](https://github.com/SilvioSerafin/silvio-data-portfolio/tree/main/sql)
+Tools: SQL Server | Power BI | Excel
 
----
+Cleaned and modelled Fitbit data from 33 users using T-SQL views
+Identified patterns in activity, sleep and sedentary behaviour
+Built a Power BI dashboard visualising user behaviour trends
 
-### Bellabeat SQL Case Study
-*Google Data Analytics capstone project*
+View case study
 
-**Tools:** SQL Server · Power BI · Excel
+Skills
+Category	Tools
+Data analysis	SQL (T-SQL, CTEs, joins, aggregation), Excel, DAX
+Visualisation	Power BI dashboards, KPI reporting
+Domain	Quality engineering, ISO 9001, workflow mapping, cost analysis
+Other	Git, GitHub, Draw.io
+Connect
 
-- Cleaned and modelled Fitbit data from 33 users using T-SQL views
-- Identified patterns in activity, sleep, and sedentary behaviour
-- Built a Power BI dashboard visualising user behaviour trends
-
-[View Case Study](https://github.com/SilvioSerafin/silvio-data-portfolio/blob/main/case-study-bellabeat)
-
----
-
-## Technical Skills
-
-| Category | Tools |
-|---|---|
-| **Data Analysis** | SQL (T-SQL, CTEs, window functions), Excel, DAX |
-| **Visualisation** | Power BI dashboards, automated reporting |
-| **Domain** | Manufacturing QA, workflow mapping, cost analysis, ROI |
-| **Other** | Git, GitHub, Draw.io, Google Sheets |
-
----
-
-## Connect
-
-[LinkedIn](https://www.linkedin.com/in/silvio-cesar-serafin-filho-758111335) ·
-[GitHub Profile](https://github.com/SilvioSerafin) ·
-silviofh@hotmail.com
-
----
-
-⚡ Actively building — SQL analysis and a supply chain analytics project are in progress.
+LinkedIn | GitHub profile | silviofh@hotmail.com
